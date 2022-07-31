@@ -1,10 +1,12 @@
 from setuptools import setup, find_packages
+from pathlib import Path
 
-VERSION = '0.1.1'
+VERSION = '0.1.1-minor'
 DESCRIPTION = 'Create advanced sitemaps easily'
-LONG_DESCRIPTION = """
-Sitemapa is a small package to reduce your work while generating sitemaps. You describe your sitemaps with JSON-structure. Sitemapa is framework agnostic and not indexing your website — it's just generating sitemaps from your description. Noting more. I use it to generate sitemaps for millions of URLs on my websites.
-"""
+
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
+
 
 # Setting up
 setup(
@@ -13,10 +15,11 @@ setup(
     author="Dmitry S.",
     author_email="<dmitry@abstractkitchen.com>",
     description=DESCRIPTION,
-    long_description=LONG_DESCRIPTION,
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     packages=find_packages(),
     install_requires=[],
-
+    url='https://github.com/abstractkitchen/sitemapa',
     keywords=['python', 'sitemap', ''],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
