@@ -1,17 +1,16 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.1.0'
+VERSION = '0.1.1'
 DESCRIPTION = 'Create advanced sitemaps easily'
 LONG_DESCRIPTION = """
-Describe your sitemaps with JSON description. No XML needed. URLs, Images, Videos and News are supported. 
-You can easily add custom xml-properties and extra child tags. No extra dependencies.
+Sitemapa is a small package to reduce your work while generating sitemaps. You describe your sitemaps with JSON-structure. Sitemapa is framework agnostic and not indexing your website — it's just generating sitemaps from your description. Noting more. I use it to generate sitemaps for millions of URLs on my websites.
 """
 
 # Setting up
 setup(
     name="sitemapa",
     version=VERSION,
-    author="Dmitry",
+    author="Dmitry S.",
     author_email="<dmitry@abstractkitchen.com>",
     description=DESCRIPTION,
     long_description=LONG_DESCRIPTION,
