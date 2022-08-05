@@ -24,7 +24,7 @@ from sitemapa import Sitemap, IndexSitemap
 
 ## Usage
 
-[Read about usage on my website](https://abstractkitchen.com/sitemaps-for-devs).
+[Read about usage on my website](https://abstractkitchen.com/blog/sitemaps-for-devs/#sitemapa-library).
 
 ## Contacts
 - [visit abstractkitchen.com](https://abstractkitchen.com)
