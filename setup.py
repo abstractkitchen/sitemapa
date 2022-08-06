@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 from pathlib import Path
 
-VERSION = '0.1.3'
+VERSION = '0.1.4'
 DESCRIPTION = 'Create advanced sitemaps easily'
 
 this_directory = Path(__file__).parent
@@ -19,7 +19,7 @@ setup(
     long_description_content_type='text/markdown',
     packages=find_packages(),
     install_requires=[],
-    url='https://github.com/abstractkitchen/sitemapa',
+    url='https://abstractkitchen.com/blog/sitemaps-for-devs/',
     keywords=['python', 'sitemap', ''],
     classifiers=[
         "Development Status :: 5 - Production/Stable",

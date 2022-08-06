@@ -67,12 +67,10 @@ def add_url_items(url_node, item_type, items):
 
 class SitemapBase:
     def __init__(self, **kwargs):
-        compress = kwargs.get("compress", False)  # if True — gzip compression will be applied
         max_urls = kwargs.get("max_urls", 50000)
 
         self.urls = {}
         self.max_urls = max_urls
-        self.compress = compress
         self.options = kwargs
 
         # These parameters will be detected automatically
@@ -84,26 +82,17 @@ class SitemapBase:
         raise NotImplementedError
 
     def save(self, save_as, **kwargs):
-        compress = kwargs.get("compress", None)
-
-        if compress:
-            self.compress = compress
-
+        compress = ".xml.gz" in save_as
         root = self.create_tree()
         sitemap_name = save_as.split("/")[-1]
         dest_path = "/".join(save_as.split("/")[:-1])
-
-        sitemap_name = f"{sitemap_name}.xml"
-        if self.compress:
-            sitemap_name = f"{sitemap_name}.gz"
-
         save_as = f"{dest_path}/{sitemap_name}"
 
         # create sitemap path if not existed
         if not os.path.exists(f"{dest_path}/"):
             os.makedirs(f"{dest_path}/")
 
-        if not self.compress:
+        if not compress:
             tree = cElementTree.ElementTree(root)
             tree.write(save_as, encoding='utf-8', xml_declaration=True)
         else:
