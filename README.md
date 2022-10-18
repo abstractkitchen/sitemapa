@@ -1,7 +1,7 @@
 # Sitemapa
 #### _Create advanced sitemaps easily._
 
-![Create sitemaps with Sitemapa](https://abstractkitchen.com/static/assets/sitemapa-image.jpg "Create sitemaps with Sitemapa")
+![Create sitemaps with Sitemapa](https://abstractkitchen.com/static/sitemaps-for-devs/sitemapa-image.jpg "Create sitemaps with Sitemapa")
 
 Sitemapa is a small package to reduce your work while generating sitemaps. You describe your sitemaps with JSON-structure. Sitemapa is framework agnostic and not indexing your website — it's just generating sitemaps from your description. Noting more. I use it to generate sitemaps for millions of URLs on my websites. 
 
